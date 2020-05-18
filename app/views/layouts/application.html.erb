@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teems</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <% if current_user && user_signed_in? %>
+    <nav class="navbar fixed-top navbar-expand-xl navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="<%= products_path %>">SHOP</a>
+                <a class="nav-item nav-link" href="#">OUR MISSION</a>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href=" <%= root_path %>">TEEMS</a>
+        </div>
+        
+        <div class="navbar-nav">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MY ACCOUNT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">PROFILE</a>
+                <a class="dropdown-item" href="<%= orders_path %>">ORDER HISTORY</a>
+                <div class="dropdown-divider"></div>
+                <%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete, class:"dropdown-item" %>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href=" <%= root_path %>">HELP</a>
+            <a class="nav-item nav-link" href=" <%= shopping_cart_path(@cart)  %>">CART </a>
+            <%= link_to "SIGN OUT", destroy_user_session_path, :method => :delete, class:"nav-item nav-link" %>
+        </div>
+        
+    </nav>
+    <% else %>
+    <nav class="navbar fixed-top navbar-expand-xl navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="<%= products_path %>">SHOP</a>
+                <a class="nav-item nav-link" href="#">OUR MISSION</a>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" href=" <%= root_path %>">TEEMS</a>
+        </div>
+        <div class="navbar-nav">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                MY ACCOUNT
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="<%= new_user_session_path %>">LOG IN </a>
+                <a class="dropdown-item" href="<%= new_user_registration_path %>">SIGN UP</a>
+            </div>
+        </div>
+        <div class="navbar-nav">
+            <%= link_to "CONTINUE AS GUEST", welcome_index_path, method: :post, class:"nav-item nav-link" %>
+        </div>
+    </nav>
+    <% end %>
+
+    <%= yield %>
+    
+    <%= render 'layouts/footer'%>
+</body>
+
+</html>
