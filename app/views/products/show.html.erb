@@ -1,0 +1,13 @@
+<h1><%= @product.name%></h1>
+
+<p><%= @product.description %></p>
+<p><%= @product.price %></p>
+
+  <div>
+    <%= form_with url: shopping_cart_items_path do |f| %>
+      <%= hidden_field_tag 'product_id', @product.id  %>
+        <%= f.select :size_id, options_for_select(@sizes)%>
+        <%= f.select :color_id, options_for_select(@colors)%>
+        <%= f.submit "Add Item to Cart"%>
+      <% end %>
+  </div>
