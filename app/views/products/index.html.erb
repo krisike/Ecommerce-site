@@ -1,0 +1,13 @@
+<% if current_user%>
+  Logged in as: <%= current_user.name%>
+<% end %>
+
+<h1>Products!</h1>
+
+<% @products.each do |product|%>
+  <div>
+    Name : <%= product.name %>
+    Description : <%= product.description %>
+    Price : <%= product.price %>
+  </div>
+<% end %>
