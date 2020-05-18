@@ -1,0 +1,39 @@
+<head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= bootstrap_devise_error_messages! %>
+    <%= stylesheet_link_tag 'devise_styles', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Edit your password</h5>
+                            <form class="form-signin">
+                                <div class="form-label-group">
+                                    <%= f.password_field :current_password, autocomplete: 'current-password', class: 'form-control' %>
+                                    <label for="inputEmail">Current Password</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <%= f.password_field :password, autocomplete: 'new-password', class: 'form-control' %>
+                                    <label for="inputPassword">New Password</label>
+                                </div>
+                                <div class="form-label-group">
+                                    <%= f.password_field :password_confirmation, autocomplete: 'new-password', class: 'form-control'  %>
+                                    <label for="inputPassword">Confirm New Password</label>
+                                </div>
+                                <%= f.submit t('.update'), class: 'btn btn-lg btn-light btn-block' %>
+                                <%= render 'devise/shared/links' %>
+                                <%= link_to t('.back'), :back %>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</body>
