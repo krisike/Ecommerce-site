@@ -1,0 +1,109 @@
+
+
+  <div class="row product-top" style="padding: 0 11%;">
+    <div class="column product-gallery"  style="width:65%;">
+      <div class="row">
+        <div class="column product-pic-large ppl-left" style="width:50%">
+          <img src="<%= @product.image%>" height="490px">
+        </div>
+        <div class="column product-pic-large ppl-right" style="width:50%">
+          <img src="<%= @product.image%>" height="490px">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column product-pic-small pps-1" style="width:25%;">
+          <img src="<%= @product.image%>" height="245px">
+        </div>
+        <div class="column product-pic-small pps-2" style="width:25%;">
+          <img src="<%= @product.image%>" height="245px">
+        </div>
+        <div class="column product-pic-small pps-3" style="width:25%;">
+          <img src="<%= @product.image%>" height="245px">
+        </div>
+        <div class="column product-pic-small pps-4" style="width:25%;">
+          <img src="<%= @product.image%>" height="245px">
+        </div>
+      </div>
+    </div>
+    <div class="column product-details" style="width:35%; padding:6% 0% 0 6%;">
+      <h3 class="product-single-header"><%= @product.name%></h3>
+      <p class="product-single-text" style="margin: 0% 0 7% 0; font-size:16px;">Reviews Here</p>
+
+      <p class="product-single-desc"><%= @product.description %></p>
+      
+        <div class="product-single-form">
+          <%= form_with url: shopping_cart_items_path, :class=> 'prdct-form' do |f| %>
+            <%= hidden_field_tag 'product_id', @product.id  %>
+              <p class="product-single-text" style="margin: 9% 0 0 0;">Size:</p>
+              <%= f.select :size_id, options_for_select(@sizes)%>
+              <p class="product-single-text" style="margin: 3% 0 0 0;">Color:</p>
+              <%= f.select :color_id, options_for_select(@colors)%>
+              <p class="product-single-text" style="font-size:40px; margin: 9% 0 6% 0;"><%= @product.price %></p>
+              <%= f.submit "Add Item to Cart", :class => 'atc-btn'%>
+            <% end %>
+        </div>
+    </div>
+  </div>
+
+  <div class="row campaign-mood align-items-center mx-auto">
+    <h3 style="color:#fff;font-weight:800; margin-left: auto; margin-right: auto; font-size: 90px;">#Mood</h3>
+  </div>
+
+  <div class="row align-items-center mx-auto" style="padding:10%">
+            <div class="column" style="width:50%">
+              <img src="https://www.refreshmiami.com/wp-content/uploads/2020/01/wyncode1.jpg" width="450px" style="
+                border-radius: .8rem;
+              ">
+            </div>
+            <div class="column" style="width:50%; padding:0 0 0 10%;">
+              <h3 style="font-weight:800;">Where We're From</h3>
+              <p> 
+              Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. 
+              </p>
+            </div>
+  </div>
+
+  <div class="row mx-auto skwed" style="padding:0 3%;">
+            <div class="column l" style="width:50%; padding:0 8%;">
+              <div id="washcare-pic"> </div>
+              <h3 style="font-weight:800; text-align:center; padding:3% 0%;">Care For Me</h3>
+              <p style="margin-left:4%;"> Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. </p>
+              <img src="https://cdn.shopify.com/s/files/1/2603/0864/files/preview-full-garment-care-icons_gray_1024x1024.png?v=1543606498" height="100px" style="display: flex; margin-left: auto; margin-right: auto; ">
+            </div>
+
+            <div class="column r" style="width:50%; margin-top:150px; padding:0 8%;">
+              <div id="whycotton-pic"></div>
+              <h3 style="font-weight:800; text-align:center; padding:3% 0%;">Why Cotton?</h3>
+              <p style="margin-left:4%;">Lorem ipsum dolor sit amet, consectetur 
+              adipiscing elit, sed do eiusmod tempor 
+              incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+  </div>
+
+  <div class="row mx-auto">
+  <h3 style="font-weight:800; text-align:center; padding:3% 0%;  margin-left: auto; margin-right: auto;">Reviews</h3>
+  </div>
+
+  <div class="tt-picks">
+  <h4 class="mx-auto" style="width:12rem; padding-top:30px;">Teems Team Picks</h4>
+  <div class="row" style="padding: 0 8%;">
+  <% @products.order("RANDOM()").limit(4).each do |product|%>
+    <div class="column card product-pg-image" style="width: 25%;">
+      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <%= link_to product.name, product_path(product) %> <br />
+        <%= product.description %> <br />
+        <%= product.price %>
+        
+      </div>
+    </div>
+    
+  <% end %>
+  </div>
+
+
+  <%= render "instagram-pics" %>
