@@ -1,0 +1,5 @@
+$('#review_comment').val('');
+
+$('.review-list').html(
+    '<%= j render('/reviews/index', reviews: @reviews) %>'
+)
