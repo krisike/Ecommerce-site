@@ -1,0 +1,14 @@
+<h1><%= @cart.user.name %>'s Cart</h1>
+
+<% @cartItems.each do |item|%>
+  <div>
+    Name : <%= item.product_variant.product.name %>
+    Price : <%= item.product_variant.product.price %>
+    Size : <%= item.product_variant.size.name %>
+    Color : <%= item.product_variant.color.name %>
+  </div>
+<% end %>
+
+<p>Total is <%= @total %></p>
+
+<%= link_to 'Checkout', new_order_path %>
