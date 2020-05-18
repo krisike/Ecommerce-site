@@ -1,0 +1,225 @@
+<div class="hero_image">
+    <div class="hero-text">
+        <div class="hht">
+            <h1 class="hero-header">CHANGING THE WORLD</h1>
+        </div>
+        <div class="hht">
+            <h1 class="hero-subheader">ONE T-SHIRT AT A TIME</h1>
+        </div>
+    </div>
+    <form class="button_box" action="http://localhost:3000/products">
+        <input class="hero-button" type="submit" value="SHOP NOW" />
+    </form>
+</div>
+
+<div class=section1>
+<div class="row align-items-center mx-auto" style="padding:10% 0% 1% 11%;">
+    <div class="column" style="width:50%; padding:0 3% 0 1%; text-align:center;">
+        <h3 style="font-weight:800;">Where We're From</h3>
+        <p> 
+        Lorem ipsum dolor sit amet, consectetur 
+        adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. 
+        </p>
+    </div>
+    <div class="column" style="width:50%">
+        <img src="https://www.refreshmiami.com/wp-content/uploads/2020/01/wyncode1.jpg" width="450px" style="
+        border-radius: .08rem;
+        ">
+    </div>
+    
+</div>
+
+<h4 class="mx-auto" style="width:22.4rem; padding:16px 0px; text-align:center;">Partners</h4>
+
+<div class="row" style="padding: 0 16% 65px 16%;">
+    <div class="column mx-auto charity-pics charity-pics-1">
+    </div>
+    <div class="column mx-auto charity-pics charity-pics-2">
+    </div>
+    
+    <div class="column mx-auto charity-pics charity-pics-3">
+    </div>
+    <div class="column mx-auto charity-pics charity-pics-4">
+    </div>
+</div>
+</div>
+
+<div class="container home-pg-row h-row-1">
+  <h4 class="mx-auto" style="width:8rem; padding-top:20px;">Best Sellers</h4>
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+            <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
+            <div class="card-body">
+            <%= link_to product.name, product_path(product) %> <br />
+            <%= product.description %> <br />
+            <%= product.price %>
+            
+            </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+<h3 class="mx-auto" style="width:22.4rem; padding:30px 0px; text-align:center;">Free Priority Shipping In USA</h3>
+
+<div class="container home-pg-row h-row-2">
+    <h4 style="text-align:center">Our Impact</h4>
+    <div class="row" style="text-align:center">
+        
+        <div class="column mx-auto">
+        <div class="row">
+            <div class="column mx-auto impact-pics impact-1">
+            </div>
+        </div>
+        <div class="row">
+        <h3 style="width:100%">160k</h3>
+        <p style="width:100%">Happy Buyers</p>
+        </div>
+        </div>
+        
+        <div class="column mx-auto">
+        <div class="row">
+            <div class="column mx-auto impact-pics impact-2">
+            </div>
+        </div>
+        <div class="row">
+            <h3 style="width:100%">40k</h3>
+            <p style="width:100%">Lives Saved</p>
+        </div>
+        </div>
+
+        <div class="column mx-auto">
+        <div class="row">
+            <div class="column mx-auto impact-pics impact-3">
+            </div>
+        </div>
+        <div class="row">
+            <h3 style="width:100%">$5 Mil</h3>
+            <p style="width:100%">Raised</p>
+        </div>
+        </div>
+
+        <div class="column mx-auto">
+        <div class="row">
+            <div class="column mx-auto impact-pics impact-4">
+            </div>
+        </div>
+        <div class="row">
+            <h3 style="width:100%">35+</h3>
+            <p style="width:100%">Partners</p>
+        </div>
+        </div>
+
+        
+        
+        
+    </div>
+    
+</div>
+
+<div class="container home-pg-row h-row-3">
+<div class="smpix" style="padding: 30px 0 100px 0">
+    <h3 class="mx-auto" style="width:22.4rem; padding:30px 0px; text-align:center;">Feel the love <a href="#">@teemsmission</a></h3>
+    <div class="row">
+        <div class="column" style="width:50%">
+            <div class="row smpic-big-l">
+            </div>
+            <div class="row smpic-small">
+                <div class="column smpic-small-l1">
+                </div>
+                <div class="column smpic-small-l2">
+                </div>
+            </div>
+        </div>
+        <div class="column" style="width:50%">
+            <div class="row smpic-small">
+                <div class="column smpic-small-r1">
+                
+                </div>
+                <div class="column smpic-small-r2">
+                </div>
+            </div>
+            <div class="row smpic-big-r">
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
+<div class="container home-pg-row h-row-4" style="margin-top:80px;">
+    <img src="https://www.revisionenergy.com/wp-content/uploads/2015/07/2018_BCorpBrand.png" height="150px" style="
+    margin-left: auto;
+    display: flex;
+    margin-right: auto;
+    ">
+    <div class="row" style="text-align: center; margin-top: 30px;">
+        <h3 class="mx-auto" style="width:21.7rem; padding:0px 0px">
+        Philanthropy Meets Fashion <br />
+        But With Confidence
+        </h3>
+    </div>
+</div>
+
+<div class="container home-pg-row h-row-5">
+    <div class="row" style="margin-top:80px">
+        <div class="row align-items-center mx-auto" style="padding: 8% 7% 8% 7%; background: #d8d8d8;">
+            <div class="column" style="width:50%">
+                <img src="https://www.refreshmiami.com/wp-content/uploads/2020/01/wyncode1.jpg" width="450px" style="
+                border-radius: .08rem;
+                ">
+            </div>
+            <div class="column" style="width:50%; padding:0 0 0 10%; text-align:center;">
+                <h3 style="font-weight:800;">Our Mission</h3>
+                <p> 
+                Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor incididunt 
+                ut labore et dolore magna aliqua. 
+                </p>
+                <button style="width: 160px; height: 40px; background: #0000; border: 2px solid #000; ">Learn More</button>
+            </div>
+            
+        
+        </div>
+    </div>
+</div>
+
+<div class="row container home-pg-row h-row-6 align-items-center" style="margin-top:60px;">
+    <div class="column bottom-cards align-items-center" style="background: #f3f3f3; ">
+        <h2>Give $10, Get $10</h2>
+        <a href="3"><h4 style="margin-top: 200px; text-decoration: underline;">REFER A FRIEND</h4></a>
+    </div>
+    <div class="column bottom-cards align-items-center" style="background: #d8d8d8; color:#fff;">
+        <h2>The Gift That Gives</h2>
+        <a href="3"><h4 style="margin-top: 200px; text-decoration: underline;">GIFT CARDS</h4></a>
+    </div>
+</div>
+
+<div class="container home-pg-row h-row-7">
+<h3 class="mx-auto" style="width:22.4rem; padding:30px 0px; text-align:center;">Press</h3>
+</div>
+
+
+<div class="container">
+    <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active text-center p-4">
+                 <p>lorem ipsum (imagine longer text)</p>
+            </div>
+            <div class="carousel-item text-center p-4">
+                
+                <p>lorem ipsum (imagine longer text)</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
