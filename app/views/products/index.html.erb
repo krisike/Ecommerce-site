@@ -1,0 +1,42 @@
+<% if current_user%>
+  Logged in as: <%= current_user.name%>
+<% end %>
+<div class="row">
+  <div class="coloumn prdcts-hero-left" style="width:70%">
+  </div>
+  <div class="coloumn prdcts-hero-right" style="width:30%">
+  </div>
+</div>
+<div class="container product-pg-row">
+  <p><strong>All</strong> - 18 Results</p>
+  <hr>
+  <h4 class="mx-auto" style="width:8rem">Best Sellers</h4>
+  <div class="row">
+  <% @products.each do |product|%>
+    <div class="column card product-pg-image" style="width: 33.33%;">
+      <a href="<%= product_path(product) %>"><img src="<%= product.image %>" height="auto"class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <%= link_to product.name, product_path(product) %> <br />
+        Description : <%= product.description %> <br />
+        Price : <%= product.price %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+<h3 class="mx-auto" style="width:22.4rem; padding:30px 0px">Free Priority Shipping In USA</h3>
+<div class="container product-pg-row">
+  <h4 class="mx-auto" style="width:9rem">Artist Collabs</h4>
+  <div class="row">
+  <% @products.each do |product|%>
+    <div class="column card product-pg-image" style="width: 33.33%;">
+      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <%= link_to product.name, product_path(product) %> <br />
+        Description : <%= product.description %> <br />
+        Price : <%= product.price %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
