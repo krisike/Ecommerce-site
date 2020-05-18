@@ -1,0 +1,7 @@
+<% reviews.each do |review|%>
+    <% next unless review.persisted? %>
+    <div style="text-align:center"><p>Rating: <%= review.rating %></p><d/iv>
+    <div style="text-align:center"><p>Comment: <%= review.comment %></p></div>
+    <div style="text-align:center"><p>User: <%= review.user.name %></p></div>
+    <hr>
+<% end %>
