@@ -1,0 +1,25 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.product-pg-image {
+    float:left;
+    padding: 4%;
+    background: #f9f9f9;
+    border: 0px;
+}
+
+.product-pg-row {
+    background-color: #f9f9f9;
+    display:flow-root; 
+}
+
+.prdcts-hero-right{
+    min-height: 300px;
+    background-color: #9e9e9e;
+}
+
+.prdcts-hero-left {
+    min-height: 300px;
+    background-color: #000;
+}
