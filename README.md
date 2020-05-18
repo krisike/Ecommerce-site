@@ -2,7 +2,7 @@
 
 # README
 
-What Is #tihs website?
+What Is #this website?
 * This Is Where !
 
 
