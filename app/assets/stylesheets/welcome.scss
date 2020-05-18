@@ -1,0 +1,309 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+// *= require_bootstrap
+//  *= require_tree .
+//  *= require_self
+.hero_image{
+    background-image: url(https://trellis.co/wp-content/uploads/2018/07/the_future_of_fashion_ecommerce.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 27vh;
+}
+
+.hero-text {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-text {
+    font-size: 7vw;
+    transform: rotate(-8deg);
+    color:#f5f5dc;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.subheader-text {
+    font-size: 7vw;
+    transform: rotate(-8deg);
+    color:#f5f5dc;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+.button_box {
+    display:flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.secondary_box {
+    display: flex;
+    align-items: center;
+    height: 40vh;
+    justify-content: space-evenly;
+}
+
+.partner_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icons {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 5%;
+}
+
+.icon_section {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 100px;
+};
+
+.hero-button{
+	/* Font & Text */
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	line-height: 24px;
+	text-decoration: none solid #f5f5dc;
+	text-align: center;
+	text-indent: 0px;
+	text-transform: none;
+	vertical-align: middle;
+	white-space: normal;
+	word-spacing: 0px;
+
+	/* Color & Background */
+	background-attachment: scroll;
+	background-color: rgba(0, 0, 0, 0);
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	color: #f5f5dc;
+
+	/* Box */
+	height: 7vh;
+	width: 200px;
+	border: 1px solid #f5f5dc;
+
+	/* Positioning */
+	position: static;
+	top: auto;
+	bottom: auto;
+	right: auto;
+	left: auto;
+	float: none;
+
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: pointer;
+    visibility: visible;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    /* Effects */
+	transition: all 1.2s ease 0.2s;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: 2px 2px 4px #000000;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: 2px 2px 4px #000000;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.hero-button:hover {
+    transform: scale(1.2);
+    background-color: #F5F5DC;
+    color: black;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '⇢';
+  font-size: 55px;
+  color:#000;
+}
+
+.carousel-control-prev-icon:after {
+  content: '⇠';
+  font-size: 55px;
+  color:#000;
+}
+
+.charity-pics-1 {
+    background: url("https://images.forbes.com/card-img-8.png");
+    background-size: cover;
+}
+
+.charity-pics-2 {
+    background: url("https://images.forbes.com/card-img-10.png");
+    background-size: cover;
+}
+
+.charity-pics-3 {
+    background: url("https://images.forbes.com/card-img-5.png");
+    background-size: cover;
+}
+
+.charity-pics-4 {
+    background: url("https://images.forbes.com/card-img-red-cross.png");
+    background-size: cover;
+}
+
+.charity-pics-nul{
+    border:0px;
+    width:10px;
+}
+
+.charity-pics {
+    height: 150px;
+    border: 3px solid #eeeeee;
+    background-position: center;
+    width:150px;
+    border-radius: 7%;
+}
+
+.impact-pics {
+    height: 150px;
+    border: 0px solid #d7d7d7;
+    background-position: center;
+    width:150px;
+    background:#000;
+    border-radius:50%;
+
+}
+
+.impact-1 {
+    background: url("https://image.flaticon.com/icons/svg/33/33887.svg");
+    background-size:cover;
+
+}
+
+.impact-2 {
+    background: url("https://image.flaticon.com/icons/svg/620/620798.svg");
+    background-size:cover;
+
+}
+
+.impact-3 {
+    background: url("https://image.flaticon.com/icons/svg/60/60481.svg");
+    background-size:cover;
+
+}
+
+.impact-4 {
+    background: url("https://image.flaticon.com/icons/svg/52/52349.svg");
+    background-size:cover;
+
+}
+
+.bottom-cards {
+    width: 50%;
+    // height: 400px;
+    text-align: center;
+    padding: 14% 4% 4% 4%;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.section1 {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 55%, rgba(234,234,234,1) 90%);
+}
+
+.h-row-1 {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 55%, rgba(249,249,249,1) 100%);
+}
+
+.h-row-2 {
+    background: #f8f8f8;
+    padding: 50px 0px !important;
+}
+
+.h-row-3 {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(213,213,213,1) 100%);
+
+}
+
+.smpic-big-l {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/89667082_632711133957073_7735272110324848060_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=d_aciYMr7cUAX_o2CL7&oh=b34c6c610308a9372e2532cd8e13840e&oe=5EB03F16");
+    background-size:cover;
+    height:500px;
+    background-position:center;
+
+}
+
+.smpic-big-r {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/83926948_473006816908083_3575021990004833473_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=uf06JfIRSX0AX9ATxWd&oh=1e045827a2677046676765446fbdb6ab&oe=5EA85579");
+    background-size:cover;
+    height:500px;
+    background-position:center;
+
+}
+
+.smpic-small-l1 {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/85170132_219913959408866_1823836580925867565_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=dNbc24-kx2UAX9fq9Xr&oh=0fbe382f3073b6afe77b5988a56ed607&oe=5E9F54A8");
+    background-size:cover;
+    height:250px;
+    background-position:center;
+    width:50%;
+
+
+}
+.smpic-small-l2 {
+    background: url("https://instagram.fmia1-2.fna.fbcdn.net/v/t51.2885-15/e35/81150685_183445869432472_4857893204271543199_n.jpg?_nc_ht=instagram.fmia1-2.fna.fbcdn.net&_nc_cat=104&_nc_ohc=T7s-6sllHWIAX_HprqC&oh=2d93d196ceea978bb0ee44c40a2e754c&oe=5EB2116F");
+    background-size:cover;
+    height:250px;
+    background-position:center;
+    width:50%;
+}
+
+.smpic-small-r1 {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/83307658_230713694627444_939430214473638869_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=ZfgNcigEydoAX9RygCb&oh=d4dcfae2eb226d03edd01e49888bdb27&oe=5E9F8329");
+    background-size:cover;
+    height:250px;
+    background-position:center;
+    width:50%;
+}
+
+.smpic-small-r2 {
+    background: url("https://instagram.fmia1-2.fna.fbcdn.net/v/t51.2885-15/fr/e15/s1080x1080/84338100_202648980841884_4312472518866522841_n.jpg?_nc_ht=instagram.fmia1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=gE_fuRSzNlAAX_KQR5C&oh=d567ef903e2d2e3f9034f4e28c81f2a1&oe=5EA9F4A4");
+    background-size:cover;
+    height:250px;
+    background-position:center;
+    width:50%;
+}

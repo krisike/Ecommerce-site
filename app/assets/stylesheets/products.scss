@@ -1,0 +1,213 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+r {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-pg-image {
+    float:left;
+    padding: 4%;
+    background: #f9f9f900 !important;
+    border: 0px !important;
+}
+
+.product-pg-row {
+    display:flow-root;
+}
+
+
+.p-row-1 {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(249,249,249,1) 90%);
+}
+
+.p-row-2 {
+    background: linear-gradient(180deg, rgba(249,249,249,1) 0%, rgba(237,237,237,1) 77%);
+}
+
+.p-row-3 {
+    background: linear-gradient(180deg, rgba(236,236,236,1) 0%, rgba(220,220,220,1) 77%);
+
+}
+
+.p-row-4 {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(220,220,220,1) 77%);
+    padding: 5% 0 0 0;
+}
+
+.product-top {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,1) 80%);
+}
+
+.prdcts-hero-right{
+    min-height: 85vh;
+    background-color: #9e9e9e;
+}
+
+.prdcts-hero-left {
+    min-height: 85vh;
+    background-image: url(https://www.polaroidfotobar.com/wp-content/uploads/2018/10/How-To-Soften-T-shirts.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+.card-body a {
+    color:#000;
+    font-weight: 800;
+}
+
+.pd-ig-pix {
+    width:22%;
+    height:300px;
+    background:#000;
+    margin: 0 4px;
+}
+
+.container {
+    max-width: 100vw !important;
+    padding: 0 7vw !important;
+}
+
+.card-body {
+    padding: 1.25rem 0;
+    border-radius: 20%;
+}
+
+.pdt-hr-all-items {
+    padding: 0 2.3%;
+}
+
+.hero-header {
+    text-align: center;
+    padding: 45% 0 0 0;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.hero-ppg {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.product-pic-large {
+    min-height: 300px;
+}
+
+.product-pic-small {
+    min-height: 150px;
+}
+
+.product-single-header {
+    font-weight: 900;
+}
+
+#size_id {
+    width: 50%;
+    margin: 5% 0%;
+}
+
+#color_id {
+    width: 50%;
+    margin: 5% 0%;
+}
+
+.product-single-form {
+    display: flex;
+}
+
+p {
+    font-size: 20px;
+}
+
+#washcare-pic {
+    background-image: url(https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2019%2F01%2F15210508%2FGettyImages-10267965422028129.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    min-height:500px;
+    max-width: 400px;
+    border-radius: .8rem;
+
+
+}
+
+#whycotton-pic{
+    background-image: url(https://img.huffingtonpost.com/asset/5b8045ba200000420034b241.jpeg?cache=klOHZueChW&ops=1778_1000);
+    background-attachment: scroll;
+    background-size: cover;
+    min-height:500px;
+    max-width: 400px;
+    border-radius: .8rem;
+}
+
+.skwed {
+    background: linear-gradient(9deg, #f6f6f6 70%, #FFF calc(70% + 2px));
+
+}
+
+.atc-btn {
+    width: 100%;
+    padding: 5% 0;
+    background: #c0c0c0;
+    color: #fff;
+    font-size: 23px;
+
+}
+
+.prdct-form {
+    width: 100%;
+}
+
+.campaign-mood {
+    background-image: url(https://images.pexels.com/photos/1524105/pexels-photo-1524105.jpeg);
+    background-attachment: scroll;
+    background-size: cover;
+    width:100%;
+    min-height: 350px;
+    background-position-y: 30%;
+    opacity: 1;
+    margin: 0;
+}
+
+.tt-picks {
+    background: linear-gradient(180deg, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 90%);
+}
+
+.pd-ig-pix-1 {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/83307658_230713694627444_939430214473638869_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=ZfgNcigEydoAX9RygCb&oh=d4dcfae2eb226d03edd01e49888bdb27&oe=5E9F8329");
+    background-size: cover;
+}
+
+.pd-ig-pix-2 {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/e35/p1080x1080/89667082_632711133957073_7735272110324848060_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=d_aciYMr7cUAX_o2CL7&oh=b34c6c610308a9372e2532cd8e13840e&oe=5EB03F16");
+    background-size: cover;
+}
+
+.pd-ig-pix-3 {
+    background: url("https://instagram.fmia1-1.fna.fbcdn.net/v/t51.2885-15/fr/e15/p1080x1080/83926948_473006816908083_3575021990004833473_n.jpg?_nc_ht=instagram.fmia1-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=uf06JfIRSX0AX9ATxWd&oh=1e045827a2677046676765446fbdb6ab&oe=5EA85579");
+    background-size: cover;
+}
+
+.pd-ig-pix-4 {
+    background: url("https://instagram.fmia1-2.fna.fbcdn.net/v/t51.2885-15/fr/e15/s1080x1080/84338100_202648980841884_4312472518866522841_n.jpg?_nc_ht=instagram.fmia1-2.fna.fbcdn.net&_nc_cat=100&_nc_ohc=gE_fuRSzNlAAX_KQR5C&oh=d567ef903e2d2e3f9034f4e28c81f2a1&oe=5EA9F4A4");
+    background-size: cover;
+}
+
+.review-hero {
+    width: 100vw;
+    margin: 0 0 0 0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+}
+
+.review-form {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5vw;
+    margin-bottom: 20px;
+}

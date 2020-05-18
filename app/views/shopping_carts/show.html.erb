@@ -1,0 +1,35 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+<h1><%= @cart.user.name %>'s Cart</h1>
+
+<h3 style="text-align:center; margin-top:50px">View Your Items Below</h3>
+<p style="text-align:center;">Your Total: <%= @total %></p>
+
+<div class="cart-view" style="padding:3% 17%; margin: 3% 17%; padding: 0 4%; border: 3px solid #dfdfdf;">
+    <% @cartItems.each do |item|%>
+    <div class="row align-items-center " style="width:100%; padding:2%">
+        <div class="column">
+            <a href="<%= product_path(item) %>"><img src="<%= item.product_variant.product.image%>" height="150px" alt="..."></a>
+        </div>
+        <div class="column mx-auto" style="text-align:center; width:20%;">
+            <%= item.product_variant.product.name %>
+        </div>
+
+        <div class="column mx-auto " style="text-align:center; width:20%;">
+            Size : <%= item.product_variant.size.name %>
+        </div>
+        <div class="column mx-auto" style="text-align:center; width:20%;">
+            Color : <%= item.product_variant.color.name %>
+        </div>
+        <div class="column mx-auto" style="text-align:center; width:20%;">
+            Price : <%= item.product_variant.product.price %>
+        </div>
+
+        <hr>
+    </div>
+    <% end %>
+</div>
+
+<p style="text-align:center;">Your Total: <%= @total %></p>
+<button class="checkout-btn"><%= link_to 'Checkout', new_order_path %></button>

@@ -1,0 +1,17 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+
+<% reviews.each do |review|%>
+<% next unless review.persisted? %>
+<div class="review-wrapper">
+    <div class="review-header">
+        <img style="margin-left: 2vw" src="https://image.flaticon.com/icons/svg/23/23099.svg">
+        <p style="margin-left: 15px; padding-top: 25px;"><strong>User: </strong><%= review.user.name %></p>
+    </div>
+    <div class="review-body">
+        <p style="margin-left: 2vw;"><strong>Review: </strong><%= review.comment %></p>
+    </div>
+</div>
+<hr />
+<% end %>

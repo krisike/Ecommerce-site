@@ -1,0 +1,15 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+</style>
+<div>
+    <h3>Order - <%= @order.id %></h3>
+    <% @items.each do |item| %>
+    <div>
+        <p>Product: <%= item[:product][:name] %></p>
+        <p>Description: <%= item[:product][:description] %></p>
+        <p>Price: <%= item[:product][:price] %></p>
+        <p>Color: <%= item[:color] %></p>
+        <p>Size: <%= item[:size] %></p>
+    </div>
+    <% end %>
+</div>
