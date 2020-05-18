@@ -1,0 +1,19 @@
+// Place all the styles related to the shopping_carts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.checkout-btn {
+    margin-left: auto;
+    /* justify-content: center; */
+    display: flex;
+    margin-right: auto;
+    font-size: 2rem;
+    padding: 1% 4%;
+    background: #000;
+    color: #fff;
+    margin-bottom:50px
+}
+
+.checkout-btn a {
+    color:#fff;
+}
