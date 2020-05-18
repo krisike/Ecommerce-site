@@ -1,10 +1,10 @@
-#Awesome Teena
+#
 
 # README
 
-What Is #AwesomeTeena?
-* This Is Where Philanthropy Meets Fashion!
-* A Charity Website Selling Trendy Shirts with a purpose!
+What Is #tihs website?
+* This Is Where !
+
 
 
 This is a E-Commerce Rails project that uses:
