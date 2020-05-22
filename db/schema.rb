@@ -30,6 +30,21 @@ ActiveRecord::Schema.define(version: 2020_04_12_231104) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "organizations", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "resource_description"
+    t.string "crisis_line"
+    t.string "regular_phone_number"
+    t.string "after_hour_phone_number"
+    t.string "website"
+    t.string "longitude"
+    t.string "latitude"
+    t.string "address"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "product_variants", force: :cascade do |t|
     t.bigint "size_id"
     t.bigint "color_id"
@@ -98,6 +113,13 @@ ActiveRecord::Schema.define(version: 2020_04_12_231104) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "orders", "shopping_carts"

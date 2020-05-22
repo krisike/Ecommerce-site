@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Teems</title>
+    <title>Ninety Plus</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,17 +18,17 @@
     <% if current_user  %>
     <nav class="navbar fixed-top navbar-expand-xl navbar-light bg-light" style="justify-content: center;">
         <div class="collapse navbar-collapse navbar-nav" id="navbarNavAltMarkup">
-                <a class="nav-item nav-link active" href="<%= products_path %>">SHOP</a>
-                
+            <a class="nav-item nav-link active" href="<%= products_path %>">SHOP</a>
+
         </div>
 
         <div class="collapse navbar-collapse navbar-nav" id="navbarNavAltMarkup">
-          
-            <a class="nav-item nav-link active " href="#">OUR MISSION</a>   
+
+            <a class="nav-item nav-link active " href="#">OUR MISSION</a>
         </div>
-        
-        <a class="nav-item nav-link active logo" href=" <%= root_path %>">TEEMS</a>
-        
+
+        <a class="nav-item nav-link active logo" href=" <%= root_path %>">Ninety Plus Coffee</a>
+
         <%# <% if user_signed_in? %>
         <% if user_signed_in? || user_signed_in.guest_user %>
         <div class="dropdown show">
@@ -46,7 +46,7 @@
         <div class="navbar-nav ">
             <a class="nav-item nav-link active" href=" <%= root_path %>">HELP</a>
         </div>
-            <a class="nav-item nav-link active" href=" <%= shopping_cart_path(@cart)  %>">CART </a>
+        <a class="nav-item nav-link active" href=" <%= shopping_cart_path(@cart)  %>">CART </a>
         </div>
     </nav>
     <% else %>
@@ -60,14 +60,14 @@
             </div>
         </div>
         <div class="navbar-nav">
-            <a class="nav-item nav-link active active" href=" <%= root_path %>">TEEMS</a>
+            <a class="nav-item nav-link active active" href=" <%= root_path %>">Ninety Plus Coffee</a>
         </div>
         <div class="navbar-nav">
             <%= link_to "LOG IN", new_user_session_path, class:"nav-item nav-link active"%>
         </div>
         <div class="navbar-nav">
             <%= link_to "CONTINUE AS GUEST", welcome_index_path, method: :post, class:"nav-item nav-link active" %>
-          
+
         </div>
     </nav>
     <% end %>

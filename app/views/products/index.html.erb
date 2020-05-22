@@ -1,146 +1,144 @@
-
-
 <div class="row" style="margin:0;">
-  <div class="column prdcts-hero-left" style="width:61%">
-  </div>
-  <div class="column prdcts-hero-right" style="width:39%">
-    <div class="column" style="color:#fff;">
-      <h2 class="hero-header">Teems Tees</h2>
-      <p class="hero-ppg">The world's most comfortable teess made from <br />
-      premium natural materials to go perfectly with <br />
-      your everyday escpades.<p>
+    <div class="column prdcts-hero-left" style="width:61%">
     </div>
-  </div>
+    <div class="column prdcts-hero-right" style="width:39%">
+        <div class="column" style="color:#fff;">
+            <h2 class="hero-header">Niney Plus TastingSets</h2>
+            <p class="hero-ppg">The world's most exclusive coffee <br />
+                sustainably crafted <br />
+                for you.<p>
+        </div>
+    </div>
 </div>
 
 <div class="container product-pg-row p-row-1">
-  <div class="pdt-hr-all-items">
-    <p style="padding-top:30px;"><strong>All</strong> - 18 Results</p>
-    <hr>
-  </div>
-  <h4 class="mx-auto" style="width:8rem; padding-top:20px;">Best Sellers</h4>
-
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-         <%= product.description %> <br />
-         <%= product.price %>
-        
-      </div>
+    <div class="pdt-hr-all-items">
+        <p style="padding-top:30px;"><strong>All</strong> - 18 Results</p>
+        <hr>
     </div>
-    
-  <% end %>
-  </div>
+    <h4 class="mx-auto" style="width:8rem; padding-top:20px;">Best Sellers</h4>
+
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
+    </div>
 </div>
 
 <h3 class="mx-auto" style="width:22.4rem; padding:30px 0px; text-align:center;">Free Priority Shipping In USA</h3>
 
 <div class="container product-pg-row p-row-2">
-  
-  <h4 class="mx-auto" style="width:15rem; padding-top:30px; text-align:center;">Limited Edition</h4>
 
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-        <%= product.description %> <br />
-        <%= product.price %>
-        
-      </div>
+    <h4 class="mx-auto" style="width:15rem; padding-top:30px; text-align:center;">Limited Edition</h4>
+
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
     </div>
-    
-  <% end %>
-  </div>
 
-  
-  <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Artist Collabs</h4>
 
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-        <%= product.description %> <br />
-        <%= product.price %>
-        
-      </div>
+    <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Artist Collabs</h4>
+
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
     </div>
-    
-  <% end %>
-  </div>
 </div>
 
 <div class="container row align-items-center mx-auto" style="padding:0 100px; margin: 6vh 0;">
     <div class="column mx-auto"">
-      <h3 class="mx-auto" style="width:21.7rem; padding:0px 0px">Philanthropy Meets Fashion</h3>
+      <h3 class=" mx-auto" style="width:21.7rem; padding:0px 0px">Philanthropy Meets Fashion</h3>
     </div>
     <div class="column">
-      <img src="https://www.revisionenergy.com/wp-content/uploads/2015/07/2018_BCorpBrand.png" height="85px">
+        <img src="https://www.revisionenergy.com/wp-content/uploads/2015/07/2018_BCorpBrand.png" height="85px">
     </div>
     <div class="column mx-auto"">
-      <h3 class="mx-auto" style="width:21.7rem; padding:0px 0px">Buy With Confidence</h3>
+      <h3 class=" mx-auto" style="width:21.7rem; padding:0px 0px">Buy With Confidence</h3>
     </div>
 </div>
 
 <div class="container product-pg-row p-row-3">
-  
-  <h4 class="mx-auto" style="width:16rem; padding-top:30px; text-align:center;">Celebrity Picks</h4>
 
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-        <%= product.description %> <br />
-        <%= product.price %>
-        
-      </div>
+    <h4 class="mx-auto" style="width:16rem; padding-top:30px; text-align:center;">Celebrity Picks</h4>
+
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
     </div>
-    
-  <% end %>
-  </div>
 
-  
-  <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Ambassador Selects</h4>
 
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-        <%= product.description %> <br />
-        <%= product.price %>
-        
-      </div>
+    <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Ambassador Selects</h4>
+
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
     </div>
-    
-  <% end %>
-  </div>
 
-  <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Teems Team Picks</h4>
+    <h4 class="mx-auto" style="width:15rem; padding-top:0px; text-align:center;">Ninety Plus Tasting Set Picks</h4>
 
-  <div class="row">
-  <% @products.order("RANDOM()").limit(3).each do |product|%>
-    <div class="column card product-pg-image" style="width: 33.33%;">
-      <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto"class="card-img-top" alt="..."></a>
-      <div class="card-body">
-        <%= link_to product.name, product_path(product) %> <br />
-        <%= product.description %> <br />
-        <%= product.price %>
-        
-      </div>
+    <div class="row">
+        <% @products.order("RANDOM()").limit(3).each do |product|%>
+        <div class="column card product-pg-image" style="width: 33.33%;">
+            <a href="<%= product_path(product) %>"><img src="<%= product.image%>" height="auto" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <%= link_to product.name, product_path(product) %> <br />
+                <%= product.description %> <br />
+                <%= product.price %>
+
+            </div>
+        </div>
+
+        <% end %>
     </div>
-    
-  <% end %>
-  </div>
 </div>
 
 <%= render "instagram-pics" %>
